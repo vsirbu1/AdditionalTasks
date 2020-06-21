@@ -15,6 +15,8 @@ public class FeatureSelect {
                 return 100;
             }
             case 2: {
+                System.out.println(SELECTINGTASK);
+                TaskSelect.selectTask(in.nextInt(), inputNumber);
                 return 101;
             }
             case -1: {
