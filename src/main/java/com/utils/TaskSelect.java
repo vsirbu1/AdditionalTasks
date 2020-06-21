@@ -1,5 +1,7 @@
 package main.java.com.utils;
 
+import main.java.com.tasks.TaskNumber1;
+
 import java.util.Scanner;
 
 public class TaskSelect {
@@ -8,7 +10,8 @@ public class TaskSelect {
         switch (number) {
             case 1: {
                 if (checkingType.equals(1)) {
-
+                    String inputData = in.next();
+                    TaskNumber1.checkIfPalindrome(inputData);
                 } else {
 
                 }

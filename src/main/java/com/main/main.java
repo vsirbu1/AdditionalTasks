@@ -12,8 +12,8 @@ public class main {
         WelcomeMessage.welcomeMessage();
         while (exitOperator != -1) {
             WelcomeMessage.featureSelect();
-            int inputNumber= in.nextInt();
-            exitOperator= FeatureSelect.featureSelect(inputNumber);
+            int inputNumber = in.nextInt();
+            exitOperator = FeatureSelect.featureSelect(inputNumber);
         }
 
     }
