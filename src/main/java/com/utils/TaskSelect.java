@@ -1,7 +1,9 @@
 package main.java.com.utils;
 
 import main.java.com.messages.Task1Defenition;
+import main.java.com.messages.Task2Defenition;
 import main.java.com.tasks.TaskNumber1;
+import main.java.com.tasks.TaskNumber2;
 
 import java.util.Scanner;
 
@@ -14,6 +16,10 @@ public class TaskSelect {
     //Task 1
     private static final String TESTDATA1 = "radar";
     private static final String TESTDATA2 = "qwerty";
+
+    //Task2
+    private static final String TESTDATA3 = "  #\n  ##\n ###\n ####\n#####\n";
+    private static final String TESTDATA4 = "     #\n    ###\n   #####\n  #######\n #########\n###########\n";
 
     public static void selectTask(Integer number, Integer checkingType) {
         Scanner in = new Scanner(System.in);
@@ -33,9 +39,16 @@ public class TaskSelect {
             }
             case 2: {
                 if (checkingType.equals(1)) {
-
+                    System.out.println(Task2Defenition.getTASK2DEFENITION());
+                    int inputData = in.nextInt();
+                    System.out.println(TaskNumber2.buildStairCase1(inputData)+ "\n or it's possible to draw another, better and more beautiful structure");
+                    System.out.println(TaskNumber2.buildStairCase2(inputData));
                 } else {
-
+                    int inputData = 5;
+                    if(TESTDATA3.equals(TaskNumber2.buildStairCase1(inputData))&&TESTDATA4.equals(TaskNumber2.buildStairCase2(inputData))){
+                        System.out.println(SUCCESS);
+                    }
+                    else System.out.println(FAILURE);
                 }
             }
             case 3: {
