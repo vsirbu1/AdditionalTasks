@@ -2,9 +2,12 @@ package main.java.com.utils;
 
 import main.java.com.messages.Task1Defenition;
 import main.java.com.messages.Task2Defenition;
+import main.java.com.messages.Task3Defenition;
 import main.java.com.tasks.TaskNumber1;
 import main.java.com.tasks.TaskNumber2;
+import main.java.com.tasks.TaskNumber3;
 
+import java.util.Random;
 import java.util.Scanner;
 
 import static main.java.com.tasks.TaskNumber1.*;
@@ -21,6 +24,9 @@ public class TaskSelect {
     private static final String TESTDATA3 = "  #\n  ##\n ###\n ####\n#####\n";
     private static final String TESTDATA4 = "     #\n    ###\n   #####\n  #######\n #########\n###########\n";
 
+    //Task3
+    private static final String TESTDATA5 = "5.25 6.73 9.42 1.54 3.456";
+
     public static void selectTask(Integer number, Integer checkingType) {
         Scanner in = new Scanner(System.in);
         switch (number) {
@@ -36,6 +42,7 @@ public class TaskSelect {
                         System.out.println(SUCCESS);
                     } else System.out.println(FAILURE);
                 }
+                break;
             }
             case 2: {
                 if (checkingType.equals(1)) {
@@ -50,13 +57,38 @@ public class TaskSelect {
                     }
                     else System.out.println(FAILURE);
                 }
+                break;
             }
             case 3: {
                 if (checkingType.equals(1)) {
-
+                    System.out.println(Task3Defenition.getTASK3DEFENITION());
+                    int inputData = in.nextInt();
+                    double[] floatingMatrix = new double[inputData];
+                    for (int i = 0; i < floatingMatrix.length; i++) {
+                        floatingMatrix[i]= (int)(Math.random()*10)+Math.random();
+                        System.out.print(floatingMatrix[i]+" ");
+                    }
+                    System.out.println();
+                    double[] result = TaskNumber3.inverceFloatingMatrix(floatingMatrix);
+                    for (int i = 0; i < result.length; i++) {
+                        System.out.print(result[i]+" ");
+                    }
                 } else {
-
+                    double[] floatingMatrix = new double[] {3.456, 1.54, 9.42, 6.73, 5.25};
+                    double [] result= TaskNumber3.inverceFloatingMatrix(floatingMatrix);
+                    StringBuilder resultString = new StringBuilder();
+                    for (int i = 0; i < result.length; i++) {
+                        resultString.append(result[i]);
+                        if(i!=result.length-1){
+                            resultString.append(" ");
+                        }
+                    }
+                    if(TESTDATA5.equals(resultString.toString())){
+                        System.out.println(SUCCESS);
+                    }
+                    else System.out.println(FAILURE);
                 }
+                break;
             }
             case 4: {
                 if (checkingType.equals(1)) {
