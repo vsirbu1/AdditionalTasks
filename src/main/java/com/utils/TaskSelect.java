@@ -23,11 +23,15 @@ public class TaskSelect {
     //Task3
     private static final String TESTDATA5 = "5.25 6.73 9.42 1.54 3.456";
 
-    //Task4
+    //Task4-5
     private static final String TESTDATA6 = "25 5 10 9 8 7 6 5 4 3 2 1";
 
-    //Task5
+    //Task6
     private static final Double TESTDATA7 = 3.1416;
+
+    //Task7
+    private static final int[][] MAGICSQUAREMATRIX = new int[][]{{2, 7, 6}, {9, 5, 1}, {4, 3, 8}};
+    private static final int[][] SQUAREMATRIX = new int[][]{{2, 6, 6}, {1, 5, 1}, {4, 3, 6}};
 
     public static void selectTask(Integer number, Integer checkingType) {
         Scanner in = new Scanner(System.in);
@@ -137,10 +141,22 @@ public class TaskSelect {
             }
             case 7: {
                 if (checkingType.equals(1)) {
-
+                    System.out.println(Task7Defenition.getTASK7DEFENITION());
+                    int inputData = in.nextInt();
+                    int[][] inputMatrix = new int[inputData][inputData];
+                    for (int i = 0; i < inputData; i++) {
+                        for (int j = 0; j < inputData; j++) {
+                            inputMatrix[i][j] = in.nextInt();
+                        }
+                    }
+                    if (TaskNumber7.check(inputMatrix)) System.out.println(Task7Defenition.getMAGICSQUARE());
+                    else System.out.println(Task7Defenition.getNOTMAGICSQUARE());
                 } else {
-
+                    if (TaskNumber7.check(MAGICSQUAREMATRIX) && !TaskNumber7.check(SQUAREMATRIX))
+                        System.out.println(SUCCESS);
+                    else System.out.println(FAILURE);
                 }
+                break;
             }
             case 8: {
                 if (checkingType.equals(1)) {
