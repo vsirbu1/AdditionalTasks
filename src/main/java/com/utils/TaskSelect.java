@@ -3,9 +3,11 @@ package main.java.com.utils;
 import main.java.com.messages.Task1Defenition;
 import main.java.com.messages.Task2Defenition;
 import main.java.com.messages.Task3Defenition;
+import main.java.com.messages.Task4And5Defenition;
 import main.java.com.tasks.TaskNumber1;
 import main.java.com.tasks.TaskNumber2;
 import main.java.com.tasks.TaskNumber3;
+import main.java.com.tasks.TaskNumber4And5;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -26,6 +28,9 @@ public class TaskSelect {
 
     //Task3
     private static final String TESTDATA5 = "5.25 6.73 9.42 1.54 3.456";
+
+    //Task4
+    private static final String TESTDATA6 = "25 5 10 9 8 7 6 5 4 3 2 1";
 
     public static void selectTask(Integer number, Integer checkingType) {
         Scanner in = new Scanner(System.in);
@@ -48,14 +53,13 @@ public class TaskSelect {
                 if (checkingType.equals(1)) {
                     System.out.println(Task2Defenition.getTASK2DEFENITION());
                     int inputData = in.nextInt();
-                    System.out.println(TaskNumber2.buildStairCase1(inputData)+ "\n or it's possible to draw another, better and more beautiful structure");
+                    System.out.println(TaskNumber2.buildStairCase1(inputData) + "\n or it's possible to draw another, better and more beautiful structure");
                     System.out.println(TaskNumber2.buildStairCase2(inputData));
                 } else {
                     int inputData = 5;
-                    if(TESTDATA3.equals(TaskNumber2.buildStairCase1(inputData))&&TESTDATA4.equals(TaskNumber2.buildStairCase2(inputData))){
+                    if (TESTDATA3.equals(TaskNumber2.buildStairCase1(inputData)) && TESTDATA4.equals(TaskNumber2.buildStairCase2(inputData))) {
                         System.out.println(SUCCESS);
-                    }
-                    else System.out.println(FAILURE);
+                    } else System.out.println(FAILURE);
                 }
                 break;
             }
@@ -65,43 +69,62 @@ public class TaskSelect {
                     int inputData = in.nextInt();
                     double[] floatingMatrix = new double[inputData];
                     for (int i = 0; i < floatingMatrix.length; i++) {
-                        floatingMatrix[i]= (int)(Math.random()*10)+Math.random();
-                        System.out.print(floatingMatrix[i]+" ");
+                        floatingMatrix[i] = (int) (Math.random() * 10) + Math.random();
+                        System.out.print(floatingMatrix[i] + " ");
                     }
                     System.out.println();
                     double[] result = TaskNumber3.inverceFloatingMatrix(floatingMatrix);
                     for (int i = 0; i < result.length; i++) {
-                        System.out.print(result[i]+" ");
+                        System.out.print(result[i] + " ");
                     }
                 } else {
-                    double[] floatingMatrix = new double[] {3.456, 1.54, 9.42, 6.73, 5.25};
-                    double [] result= TaskNumber3.inverceFloatingMatrix(floatingMatrix);
+                    double[] floatingMatrix = new double[]{3.456, 1.54, 9.42, 6.73, 5.25};
+                    double[] result = TaskNumber3.inverceFloatingMatrix(floatingMatrix);
                     StringBuilder resultString = new StringBuilder();
                     for (int i = 0; i < result.length; i++) {
                         resultString.append(result[i]);
-                        if(i!=result.length-1){
+                        if (i != result.length - 1) {
                             resultString.append(" ");
                         }
                     }
-                    if(TESTDATA5.equals(resultString.toString())){
+                    if (TESTDATA5.equals(resultString.toString())) {
                         System.out.println(SUCCESS);
-                    }
-                    else System.out.println(FAILURE);
+                    } else System.out.println(FAILURE);
                 }
                 break;
             }
             case 4: {
                 if (checkingType.equals(1)) {
-
+                    System.out.println(Task4And5Defenition.getTASK4And5DEFENITION());
+                    int inputData = in.nextInt();
+                    int[] initialMatrix = new int[inputData];
+                    for (int i = 0; i < inputData; i++) {
+                        initialMatrix[i] = (int) (Math.random() * 100);
+                        System.out.print(initialMatrix[i] + " ");
+                    }
+                    System.out.println();
+                    String result = TaskNumber4And5.bubbleSortAndOther(initialMatrix);
+                    int n = result.indexOf(" ");
+                    System.out.println("Sum of odd numbers is " + result.substring(0, n));
+                    result = result.substring(n + 1);
+                    n = result.indexOf(" ");
+                    System.out.println("Amount of even numbers is " + result.substring(0, n));
+                    result = result.substring(n);
+                    System.out.println("Result matrix\n" + result);
                 } else {
-
+                    int[] preparedMatrix = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+                    String result = TaskNumber4And5.bubbleSortAndOther(preparedMatrix);
+                    if (TESTDATA6.equals(result)) {
+                        System.out.println(SUCCESS);
+                    } else System.out.println(FAILURE);
                 }
+                break;
             }
             case 5: {
                 if (checkingType.equals(1)) {
-
+                    selectTask(4, 1);
                 } else {
-
+                    selectTask(4, 2);
                 }
             }
             case 6: {
