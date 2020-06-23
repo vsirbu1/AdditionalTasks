@@ -1,13 +1,7 @@
 package main.java.com.utils;
 
-import main.java.com.messages.Task1Defenition;
-import main.java.com.messages.Task2Defenition;
-import main.java.com.messages.Task3Defenition;
-import main.java.com.messages.Task4And5Defenition;
-import main.java.com.tasks.TaskNumber1;
-import main.java.com.tasks.TaskNumber2;
-import main.java.com.tasks.TaskNumber3;
-import main.java.com.tasks.TaskNumber4And5;
+import main.java.com.messages.*;
+import main.java.com.tasks.*;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -31,6 +25,9 @@ public class TaskSelect {
 
     //Task4
     private static final String TESTDATA6 = "25 5 10 9 8 7 6 5 4 3 2 1";
+
+    //Task5
+    private static final Double TESTDATA7 = 3.1416;
 
     public static void selectTask(Integer number, Integer checkingType) {
         Scanner in = new Scanner(System.in);
@@ -129,9 +126,13 @@ public class TaskSelect {
             }
             case 6: {
                 if (checkingType.equals(1)) {
-
+                    System.out.println(Task6Defenition.getTASK6DEFENITION());
+                    int inputData = in.nextInt();
+                    System.out.println("Number Pi is " + Math.PI);
+                    System.out.println("New number Pi is " + TaskNumber6.findNewPi(inputData));
                 } else {
-
+                    if (TESTDATA7.equals(TaskNumber6.findNewPi(4))) System.out.println(SUCCESS);
+                    else System.out.println(FAILURE);
                 }
             }
             case 7: {
