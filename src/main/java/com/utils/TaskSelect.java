@@ -33,6 +33,9 @@ public class TaskSelect {
     private static final int[][] MAGICSQUAREMATRIX = new int[][]{{2, 7, 6}, {9, 5, 1}, {4, 3, 8}};
     private static final int[][] SQUAREMATRIX = new int[][]{{2, 6, 6}, {1, 5, 1}, {4, 3, 6}};
 
+    //Task8
+    private static final String TESTDATA8 = "2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97 ";
+
     public static void selectTask(Integer number, Integer checkingType) {
         Scanner in = new Scanner(System.in);
         switch (number) {
@@ -160,9 +163,12 @@ public class TaskSelect {
             }
             case 8: {
                 if (checkingType.equals(1)) {
-
+                    System.out.println(Task8Defenition.getTASK8DEFENITION());
+                    int inputData = in.nextInt();
+                    System.out.println(TaskNumber8.listOfPrimeNumbers(inputData));
                 } else {
-
+                    if (TESTDATA8.equals(TaskNumber8.listOfPrimeNumbers(100))) System.out.println(SUCCESS);
+                    else System.out.println(FAILURE);
                 }
             }
             case 9: {
