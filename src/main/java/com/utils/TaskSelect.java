@@ -36,6 +36,9 @@ public class TaskSelect {
     //Task8
     private static final String TESTDATA8 = "2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97 ";
 
+    //Task9
+    private static final String TESTDATA9 = "28 6 are friendly numbers\n140 30 are friendly numbers\n200 80 are friendly numbers\n";
+
     public static void selectTask(Integer number, Integer checkingType) {
         Scanner in = new Scanner(System.in);
         switch (number) {
@@ -173,9 +176,12 @@ public class TaskSelect {
             }
             case 9: {
                 if (checkingType.equals(1)) {
-
+                    System.out.println(Task9Defenition.getTASK9DEFENITION());
+                    int inputData = in.nextInt();
+                    System.out.println(TaskNumber9.findFrendlyNumbers(inputData));
                 } else {
-
+                    if (TESTDATA9.equals(TaskNumber9.findFrendlyNumbers(200))) System.out.println(SUCCESS);
+                    else System.out.println(FAILURE);
                 }
             }
             case 10: {
