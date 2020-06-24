@@ -6,7 +6,10 @@ import main.java.com.tasks.*;
 import java.util.Random;
 import java.util.Scanner;
 
+import static main.java.com.messages.Task11Defenition.getTEXT1;
+import static main.java.com.messages.Task11Defenition.getTEXT2;
 import static main.java.com.tasks.TaskNumber1.*;
+import static main.java.com.tasks.TaskNumber11.createResultMatrix;
 
 public class TaskSelect {
     //Test Status
@@ -41,6 +44,12 @@ public class TaskSelect {
 
     //Task10
     private static final String TESTDATA10 = " 2024 2028 2032 2036 2040 2044";
+
+    //Task11
+    private static final int[] MATRIX1 = new int[]{3, 4, 7, 16};
+    private static final int[] MATRIX2 = new int[]{1, 3, 4, 9};
+    private static final int[] MATRIX3 = new int[]{5, 6, 8, 9, 13};
+    private static final String TESTDATA11 = " 1 3 3 4 4 5 6 7 8 9 9 13 16";
 
     public static void selectTask(Integer number, Integer checkingType) {
         Scanner in = new Scanner(System.in);
@@ -199,9 +208,31 @@ public class TaskSelect {
             }
             case 11: {
                 if (checkingType.equals(1)) {
-
+                    System.out.println(Task11Defenition.getTASK11DEFENITION());
+                    System.out.println(getTEXT1());
+                    int[] a = new int[in.nextInt()];
+                    System.out.println(getTEXT2());
+                    for (int i = 0; i < a.length; i++) {
+                        a[i] = in.nextInt();
+                    }
+                    System.out.println(getTEXT1());
+                    int[] b = new int[in.nextInt()];
+                    System.out.println(getTEXT2());
+                    for (int i = 0; i < b.length; i++) {
+                        b[i] = in.nextInt();
+                    }
+                    System.out.println(getTEXT1());
+                    int[] c = new int[in.nextInt()];
+                    System.out.println(getTEXT2());
+                    for (int i = 0; i < c.length; i++) {
+                        c[i] = in.nextInt();
+                    }
+                    System.out.println(createResultMatrix(a, b, c));
                 } else {
 
+                    if (TESTDATA11.equals(createResultMatrix(MATRIX1, MATRIX2, MATRIX3)))
+                        System.out.println(SUCCESS);
+                    else System.out.println(FAILURE);
                 }
             }
             case 12: {
