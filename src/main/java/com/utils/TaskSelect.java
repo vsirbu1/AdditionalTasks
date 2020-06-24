@@ -51,6 +51,10 @@ public class TaskSelect {
     private static final int[] MATRIX3 = new int[]{5, 6, 8, 9, 13};
     private static final String TESTDATA11 = " 1 3 3 4 4 5 6 7 8 9 9 13 16";
 
+    //Task12
+    private static final int[][] MATRIX4 = new int[][]{{3, 1, 22, 3}, {3, 1, 1, 3}, {3, 1, 7, 7}, {3, 1, 7, 11}};
+    private static final String TESTDATA12 = "3 1 1 3 \n3 1 7 7 \n3 1 7 11 \n3 1 22 3 \n";
+
     public static void selectTask(Integer number, Integer checkingType) {
         Scanner in = new Scanner(System.in);
         switch (number) {
@@ -237,9 +241,27 @@ public class TaskSelect {
             }
             case 12: {
                 if (checkingType.equals(1)) {
-
+                    System.out.println(Task12Defenition.getTASK12DEFENITION());
+                    System.out.println(Task12Defenition.getTEXT1());
+                    int n = in.nextInt();
+                    int[][] inputMatrix = new int[n][n];
+                    System.out.println(Task12Defenition.getTEXT2());
+                    for (int i = 0; i < inputMatrix.length; i++) {
+                        for (int j = 0; j < inputMatrix.length; j++) {
+                            inputMatrix[i][j] = in.nextInt();
+                        }
+                    }
+                    for (int i = 0; i < inputMatrix.length; i++) {
+                        for (int j = 0; j < inputMatrix.length; j++) {
+                            System.out.print(inputMatrix[i][j] + " ");
+                        }
+                        System.out.println();
+                    }
+                    System.out.println();
+                    System.out.println(TaskNumber12.sortLines(inputMatrix));
                 } else {
-
+                    if(TESTDATA12.equals(TaskNumber12.sortLines(MATRIX4))) System.out.println(SUCCESS);
+                    else System.out.println(FAILURE);
                 }
             }
             case 13: {
