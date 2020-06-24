@@ -39,6 +39,9 @@ public class TaskSelect {
     //Task9
     private static final String TESTDATA9 = "28 6 are friendly numbers\n140 30 are friendly numbers\n200 80 are friendly numbers\n";
 
+    //Task10
+    private static final String TESTDATA10 = " 2024 2028 2032 2036 2040 2044";
+
     public static void selectTask(Integer number, Integer checkingType) {
         Scanner in = new Scanner(System.in);
         switch (number) {
@@ -186,9 +189,12 @@ public class TaskSelect {
             }
             case 10: {
                 if (checkingType.equals(1)) {
-
+                    System.out.println(Task10Defenition.getTASK10DEFENITION());
+                    int inputData = in.nextInt();
+                    System.out.println(TaskNumber10.findLeapYears(inputData));
                 } else {
-
+                    if (TESTDATA10.equals(TaskNumber10.findLeapYears(6))) System.out.println(SUCCESS);
+                    else System.out.println(FAILURE);
                 }
             }
             case 11: {
