@@ -10,6 +10,7 @@ import static main.java.com.messages.Task11Defenition.getTEXT1;
 import static main.java.com.messages.Task11Defenition.getTEXT2;
 import static main.java.com.tasks.TaskNumber1.*;
 import static main.java.com.tasks.TaskNumber11.createResultMatrix;
+import static main.java.com.tasks.TaskNumber13.rotateMatrix;
 
 public class TaskSelect {
     //Test Status
@@ -54,6 +55,9 @@ public class TaskSelect {
     //Task12
     private static final int[][] MATRIX4 = new int[][]{{3, 1, 22, 3}, {3, 1, 1, 3}, {3, 1, 7, 7}, {3, 1, 7, 11}};
     private static final String TESTDATA12 = "3 1 1 3 \n3 1 7 7 \n3 1 7 11 \n3 1 22 3 \n";
+
+    //Task13
+    private static final String TESTDATA13 = "4 5 6 7 8 9 1 2 3 ";
 
     public static void selectTask(Integer number, Integer checkingType) {
         Scanner in = new Scanner(System.in);
@@ -260,15 +264,23 @@ public class TaskSelect {
                     System.out.println();
                     System.out.println(TaskNumber12.sortLines(inputMatrix));
                 } else {
-                    if(TESTDATA12.equals(TaskNumber12.sortLines(MATRIX4))) System.out.println(SUCCESS);
+                    if (TESTDATA12.equals(TaskNumber12.sortLines(MATRIX4))) System.out.println(SUCCESS);
                     else System.out.println(FAILURE);
                 }
             }
             case 13: {
                 if (checkingType.equals(1)) {
-
+                    int[] a = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9};
+                    int numberOfRotates = in.nextInt();
+                    for (int i = 0; i < a.length; i++) {
+                        System.out.print(a[i] + " ");
+                    }
+                    System.out.println();
+                    System.out.println(rotateMatrix(a, numberOfRotates));
                 } else {
-
+                    int[] a = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9};
+                    if (TESTDATA13.equals(rotateMatrix(a, 3))) System.out.println(SUCCESS);
+                    else System.out.println(FAILURE);
                 }
             }
             case 14: {
