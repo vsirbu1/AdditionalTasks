@@ -285,9 +285,12 @@ public class TaskSelect {
             }
             case 14: {
                 if (checkingType.equals(1)) {
-
+                    System.out.println(Task14Defenition.getTASK14DEFENITION());
+                    int amount = in.nextInt();
+                    System.out.println("For "+amount+" you need"+TaskNNumber14.munAmountOfCoins(amount)+" coins");
                 } else {
-
+                    if(4==TaskNNumber14.munAmountOfCoins(33)) System.out.println(SUCCESS);
+                    else System.out.println(FAILURE);
                 }
             }
             case 15: {
