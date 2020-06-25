@@ -3,7 +3,6 @@ package main.java.com.utils;
 import main.java.com.messages.*;
 import main.java.com.tasks.*;
 
-import java.util.Random;
 import java.util.Scanner;
 
 import static main.java.com.messages.Task11Defenition.getTEXT1;
@@ -58,6 +57,9 @@ public class TaskSelect {
 
     //Task13
     private static final String TESTDATA13 = "4 5 6 7 8 9 1 2 3 ";
+
+    //Task15
+    private static final String TESTDATA15 = "9 8 7 \n6 5 4 \n3 2 1 \n";
 
     public static void selectTask(Integer number, Integer checkingType) {
         Scanner in = new Scanner(System.in);
@@ -287,17 +289,27 @@ public class TaskSelect {
                 if (checkingType.equals(1)) {
                     System.out.println(Task14Defenition.getTASK14DEFENITION());
                     int amount = in.nextInt();
-                    System.out.println("For "+amount+" you need"+TaskNNumber14.munAmountOfCoins(amount)+" coins");
+                    System.out.println("For " + amount + " you need" + TaskNumber14.munAmountOfCoins(amount) + " coins");
                 } else {
-                    if(4==TaskNNumber14.munAmountOfCoins(33)) System.out.println(SUCCESS);
+                    if (4 == TaskNumber14.munAmountOfCoins(33)) System.out.println(SUCCESS);
                     else System.out.println(FAILURE);
                 }
             }
             case 15: {
                 if (checkingType.equals(1)) {
-
+                    int[][] a = new int[][]{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+                    for (int i = 0; i < a.length; i++) {
+                        for (int j = 0; j < a.length; j++) {
+                            System.out.print(a[i][j] + " ");
+                        }
+                        System.out.println();
+                    }
+                    System.out.println();
+                    System.out.println(TaskNumber15.rotateMatrix(a, in.nextInt()));
                 } else {
-
+                    int[][] a = new int[][]{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+                    if (TESTDATA15.equals(TaskNumber15.rotateMatrix(a, 2))) System.out.println(SUCCESS);
+                    else System.out.println(FAILURE);
                 }
             }
             case 16: {
