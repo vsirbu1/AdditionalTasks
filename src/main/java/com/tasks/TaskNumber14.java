@@ -2,7 +2,7 @@ package main.java.com.tasks;
 
 import java.util.HashSet;
 
-public class TaskNNumber14 {
+public class TaskNumber14 {
     public static int munAmountOfCoins(int amount) {
         int inputData = amount;
         int count = 0;
