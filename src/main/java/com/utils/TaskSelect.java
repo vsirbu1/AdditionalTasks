@@ -348,13 +348,14 @@ public class TaskSelect {
             }
             case 20: {
                 if (checkingType.equals(1)) {
-
+                    System.out.println(Task20Defenition.getTASK6DEFENITION());
+                    TaskNumber20.findSequence(5);
                 } else {
-
+                    selectTask(20, 1);
                 }
             }
             default: {
-
+                System.out.println("Invalid data, please try again");
             }
         }
     }
