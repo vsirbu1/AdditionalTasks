@@ -323,9 +323,11 @@ public class TaskSelect {
             }
             case 17: {
                 if (checkingType.equals(1)) {
-
+                    System.out.println(Task17Defenition.getTASK17DEFENITION() + "\n" + Task17Defenition.getPLEASE());
+                    System.out.println(TaskNumber17.calculateMatrix(in.nextInt()));
                 } else {
-
+                    if (166 == TaskNumber17.calculateMatrixTest()) System.out.println(SUCCESS);
+                    else System.out.println(FAILURE);
                 }
             }
             case 18: {
