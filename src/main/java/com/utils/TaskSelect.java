@@ -332,9 +332,10 @@ public class TaskSelect {
             }
             case 18: {
                 if (checkingType.equals(1)) {
-
+                    System.out.println(Task18Defenition.getTASK18DEFENITION()+"\n"+Task18Defenition.getPLEASE1());
+                    TaskNumber18.startPlay(in.nextInt(),in.nextInt());
                 } else {
-
+                    selectTask(18,1);
                 }
             }
             case 19: {
