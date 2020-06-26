@@ -314,9 +314,11 @@ public class TaskSelect {
             }
             case 16: {
                 if (checkingType.equals(1)) {
-
+                    System.out.println(Task16Defenition.getTASK16DEFENITION());
+                    System.out.println(TaskNumber16.countNumberOfSteps(in.nextInt()));
                 } else {
-
+                    if (6 == TaskNumber16.countNumberOfSteps(33)) System.out.println(SUCCESS);
+                    else System.out.println(FAILURE);
                 }
             }
             case 17: {
