@@ -1,4 +1,4 @@
-package main.java.com.tasks;
+package main.java.com.tasks.implementation;
 
 public class TaskNumber9 {
     public static String findFrendlyNumbers(int inputData) {

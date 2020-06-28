@@ -1,4 +1,4 @@
-package main.java.com.tasks;
+package main.java.com.tasks.implementation;
 
 public class TaskNumber3 {
     public static double[] inverceFloatingMatrix(double[] matrix){
