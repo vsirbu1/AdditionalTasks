@@ -1,4 +1,4 @@
-package main.java.com.tasks;
+package main.java.com.tasks.implementation;
 
 public class TaskNumber18 {
     public static void startPlay(int numberOfPeople, int countingStep) {

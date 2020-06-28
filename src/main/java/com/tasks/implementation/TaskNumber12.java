@@ -1,4 +1,4 @@
-package main.java.com.tasks;
+package main.java.com.tasks.implementation;
 
 public class TaskNumber12 {
     public static String sortLines(int[][] inputMatrix) {

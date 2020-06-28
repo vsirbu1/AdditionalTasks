@@ -1,4 +1,4 @@
-package main.java.com.tasks;
+package main.java.com.tasks.implementation;
 
 public class TaskNumber8 {
     public static String listOfPrimeNumbers(int n) {

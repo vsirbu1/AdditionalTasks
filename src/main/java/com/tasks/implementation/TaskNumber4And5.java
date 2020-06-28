@@ -1,4 +1,4 @@
-package main.java.com.tasks;
+package main.java.com.tasks.implementation;
 
 public class TaskNumber4And5 {
     public static String bubbleSortAndOther(int[] inputMatrix) {

@@ -1,4 +1,4 @@
-package main.java.com.tasks;
+package main.java.com.tasks.implementation;
 
 public class TaskNumber13 {
     public static String rotateMatrix(int[] a, int numberOfRotates) {
