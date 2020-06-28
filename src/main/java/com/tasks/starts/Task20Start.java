@@ -9,6 +9,7 @@ public class Task20Start {
     public static void startTask20Manual() {
         Scanner in = new Scanner(System.in);
         System.out.println(Task20Defenition.getTASK20DEFENITION());
-        TaskNumber20.findSequence(5);
+        System.out.println(Task20Defenition.getTASK20INPUT());
+        TaskNumber20.findSequence(in.nextInt());
     }
 }

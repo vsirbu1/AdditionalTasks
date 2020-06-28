@@ -18,11 +18,11 @@ public class TaskNumber1 {
             return FALSEPALINDROME;
     }
 
-    public static String getTruepalindrome() {
+    public static String getTruePalindrome() {
         return TRUEPALINDROME;
     }
 
-    public static String getFalsepalindrome() {
+    public static String getFalsePalindrome() {
         return FALSEPALINDROME;
     }
 }

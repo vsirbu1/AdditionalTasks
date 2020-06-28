@@ -10,7 +10,7 @@ import static main.java.com.test.constants.Constants.*;
 public class Task3Start {
     public static void startTask3Manual() {
         Scanner in = new Scanner(System.in);
-        System.out.println(Task3Defenition.getTASK3DEFENITION());
+        System.out.println(Task3Defenition.getTASK3DEFENITION() + Task3Defenition.getTASK3INPUT());
         int inputData = in.nextInt();
         double[] floatingMatrix = new double[inputData];
         for (int i = 0; i < floatingMatrix.length; i++) {
@@ -22,10 +22,16 @@ public class Task3Start {
         for (int i = 0; i < result.length; i++) {
             System.out.print(result[i] + " ");
         }
+        System.out.println("\n");
     }
 
     public static void startTask3Test() {
         double[] floatingMatrix = new double[]{3.456, 1.54, 9.42, 6.73, 5.25};
+        System.out.println(Task3Defenition.getTASK3DEFENITION() +
+                Task3Defenition.getTASK3TEST());
+        for (int i = 0; i < floatingMatrix.length; i++) {
+            System.out.print(floatingMatrix[i] + " ");
+        }
         double[] result = TaskNumber3.inverceFloatingMatrix(floatingMatrix);
         StringBuilder resultString = new StringBuilder();
         for (int i = 0; i < result.length; i++) {
@@ -34,6 +40,7 @@ public class Task3Start {
                 resultString.append(" ");
             }
         }
+        System.out.println("\n" + resultString + "\n");
         if (getTESTDATA5().equals(resultString.toString())) {
             System.out.println(getSUCCESS());
         } else System.out.println(getFAILURE());

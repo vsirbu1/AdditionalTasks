@@ -12,11 +12,16 @@ public class Task16Start {
     public static void startTask16Manual() {
         Scanner in = new Scanner(System.in);
         System.out.println(Task16Defenition.getTASK16DEFENITION());
-        System.out.println(TaskNumber16.countNumberOfSteps(in.nextInt()));
+        System.out.println(Task16Defenition.getTASK16INPUT());
+        System.out.println(TaskNumber16.countNumberOfSteps(in.nextInt())+" steps");
     }
 
     public static void startTask16Test() {
-        if (6 == TaskNumber16.countNumberOfSteps(33)) System.out.println(getSUCCESS());
-        else System.out.println(getFAILURE());
+        System.out.println(Task16Defenition.getTASK16DEFENITION());
+        System.out.println(Task16Defenition.getTEST16INPUT());
+        if (6 == TaskNumber16.countNumberOfSteps(33)) {
+            System.out.println(TaskNumber16.countNumberOfSteps(33));
+            System.out.println(getSUCCESS());
+        } else System.out.println(getFAILURE());
     }
 }

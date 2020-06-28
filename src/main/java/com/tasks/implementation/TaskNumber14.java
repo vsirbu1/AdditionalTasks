@@ -3,7 +3,7 @@ package main.java.com.tasks.implementation;
 import java.util.HashSet;
 
 public class TaskNumber14 {
-    public static int munAmountOfCoins(int amount) {
+    public static int minAmountOfCoins(int amount) {
         int inputData = amount;
         int count = 0;
         int[] a = new int[]{1, 3, 10, 25, 50};

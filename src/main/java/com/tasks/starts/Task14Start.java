@@ -12,12 +12,17 @@ public class Task14Start {
     public static void startTask14Manual() {
         Scanner in = new Scanner(System.in);
         System.out.println(Task14Defenition.getTASK14DEFENITION());
+        System.out.println(Task14Defenition.getTASK14INPUT());
         int amount = in.nextInt();
-        System.out.println("For " + amount + " you need" + TaskNumber14.munAmountOfCoins(amount) + " coins");
+        System.out.println("For " + amount + " you need " + TaskNumber14.minAmountOfCoins(amount) + " coins");
     }
 
     public static void startTask14Test() {
-        if (4 == TaskNumber14.munAmountOfCoins(33)) System.out.println(getSUCCESS());
-        else System.out.println(getFAILURE());
+        System.out.println(Task14Defenition.getTASK14DEFENITION());
+        System.out.println(Task14Defenition.getTEST14INPUT());
+        if (4 == TaskNumber14.minAmountOfCoins(33)) {
+            System.out.println(TaskNumber14.minAmountOfCoins(33));
+            System.out.println(getSUCCESS());
+        } else System.out.println(getFAILURE());
     }
 }

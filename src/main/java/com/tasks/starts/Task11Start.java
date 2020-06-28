@@ -32,12 +32,28 @@ public class Task11Start {
         for (int i = 0; i < c.length; i++) {
             c[i] = in.nextInt();
         }
+        System.out.println(Task11Defenition.getRESULT11());
         System.out.println(createResultMatrix(a, b, c));
     }
 
     public static void startTask11Test() {
-        if (getTESTDATA11().equals(createResultMatrix(getMATRIX1(), getMATRIX2(), getMATRIX3())))
+        System.out.println(Task11Defenition.getTASK11DEFENITION() + Task11Defenition.getTEST11());
+        for (int i = 0; i < getMATRIX1().length; i++) {
+            System.out.print(getMATRIX1()[i] + " ");
+        }
+        System.out.println();
+        for (int i = 0; i < getMATRIX2().length; i++) {
+            System.out.print(getMATRIX2()[i] + " ");
+        }
+        System.out.println();
+        for (int i = 0; i < getMATRIX3().length; i++) {
+            System.out.print(getMATRIX3()[i] + " ");
+        }
+        System.out.println();
+        System.out.println(Task11Defenition.getRESULT11());
+        if (getTESTDATA11().equals(createResultMatrix(getMATRIX1(), getMATRIX2(), getMATRIX3()))) {
+            System.out.println(createResultMatrix(getMATRIX1(), getMATRIX2(), getMATRIX3()));
             System.out.println(getSUCCESS());
-        else System.out.println(getFAILURE());
+        } else System.out.println(getFAILURE());
     }
 }

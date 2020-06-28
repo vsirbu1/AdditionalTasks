@@ -18,6 +18,5 @@ public class main {
             int inputNumber = in.nextInt();
             exitOperator = FeatureSelect.featureSelect(inputNumber);
         }
-
     }
 }
