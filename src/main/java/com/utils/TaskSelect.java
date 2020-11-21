@@ -8,6 +8,7 @@ import static main.java.com.tasks.starts.Task11Start.startTask11Test;
 import static main.java.com.tasks.starts.Task1Start.*;
 import static main.java.com.tasks.starts.Task21Start.startTask21Test;
 import static main.java.com.tasks.starts.Task22Start.startTask22Test;
+import static main.java.com.tasks.starts.Task23Start.startTask23Test;
 import static main.java.com.tasks.starts.Task2Start.*;
 import static main.java.com.tasks.starts.Task3Start.*;
 import static main.java.com.tasks.starts.Task4And5Start.*;
@@ -137,6 +138,11 @@ class TaskSelect {
             case 22: {
                 if (checkingType.equals(1)) startTask22Test();
                 else selectTask(22, 1);
+                break;
+            }
+            case 23: {
+                if (checkingType.equals(1)) startTask23Test();
+                else selectTask(23, 1);
                 break;
             }
             default: {
